@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+    <line>
+      <![CDATA[Login success]]>
+    </line>
+    <line>
+      <![CDATA[Login Fail]]>
+    </line>
+    <line>
+      <![CDATA[Login success]]>
+    </line>
+    <line>
+      <![CDATA[Login Fail]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="21340" started-at="2019-11-13T03:38:15Z" finished-at="2019-11-13T03:38:36Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="21340" started-at="2019-11-13T03:38:15Z" finished-at="2019-11-13T03:38:36Z">
+      <class name="nov13.Orange">
+        <test-method status="PASS" signature="setup()[pri:0, instance:nov13.Orange@4671e53b]" name="setup" is-config="true" duration-ms="3532" started-at="2019-11-13T03:38:15Z" finished-at="2019-11-13T03:38:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifylogin(java.lang.String, java.lang.String)[pri:0, instance:nov13.Orange@4671e53b]" name="verifylogin" duration-ms="8279" started-at="2019-11-13T03:38:18Z" data-provider="supplyData" finished-at="2019-11-13T03:38:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Qedge123!@#]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Login success]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifylogin -->
+        <test-method status="PASS" signature="verifylogin(java.lang.String, java.lang.String)[pri:0, instance:nov13.Orange@4671e53b]" name="verifylogin" duration-ms="2837" started-at="2019-11-13T03:38:27Z" data-provider="supplyData" finished-at="2019-11-13T03:38:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Login Fail]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifylogin -->
+        <test-method status="PASS" signature="verifylogin(java.lang.String, java.lang.String)[pri:0, instance:nov13.Orange@4671e53b]" name="verifylogin" duration-ms="2796" started-at="2019-11-13T03:38:29Z" data-provider="supplyData" finished-at="2019-11-13T03:38:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Qedge123!@#]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Login success]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifylogin -->
+        <test-method status="PASS" signature="verifylogin(java.lang.String, java.lang.String)[pri:0, instance:nov13.Orange@4671e53b]" name="verifylogin" duration-ms="2590" started-at="2019-11-13T03:38:32Z" data-provider="supplyData" finished-at="2019-11-13T03:38:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Login Fail]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifylogin -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:nov13.Orange@4671e53b]" name="afterTest" is-config="true" duration-ms="1261" started-at="2019-11-13T03:38:35Z" finished-at="2019-11-13T03:38:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- nov13.Orange -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

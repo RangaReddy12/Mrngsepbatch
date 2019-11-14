@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [mrng]">
+  <test thread-count="5" name="firefoxbrowser(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="nov13.Orange">
+        <methods>
+          <include name="setup"/>
+          <include name="afterTest"/>
+          <include name="verifylogin"/>
+        </methods>
+      </class> <!-- nov13.Orange -->
+    </classes>
+  </test> <!-- firefoxbrowser(failed) -->
+  <test thread-count="5" name="iebrowser(failed)">
+    <parameter name="browser" value="ie"/>
+    <classes>
+      <class name="nov13.Orange">
+        <methods>
+          <include name="setup"/>
+          <include name="afterTest"/>
+          <include name="verifylogin"/>
+        </methods>
+      </class> <!-- nov13.Orange -->
+    </classes>
+  </test> <!-- iebrowser(failed) -->
+</suite> <!-- Failed suite [mrng] -->

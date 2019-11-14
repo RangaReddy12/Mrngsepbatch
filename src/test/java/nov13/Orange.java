@@ -1,23 +1,51 @@
 package nov13;
-
 import org.testng.annotations.Test;
-
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.BeforeTest;
+import java.net.URL;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
-
 public class Orange {
 	WebDriver driver;
 	ExtentReports report;
 	ExtentTest test;
+DesiredCapabilities cap;
+String node="http://localhost:5550/wd/hub";
+@Parameters({"browser"})
+@BeforeTest
+ public void setup(String brw)throws Throwable {
+ report=new ExtentReports("./Reports/Dataprovider.html");
+if(brw.equalsIgnoreCase("chrome"))
+{
+System.out.println("Executing on chrome");
+cap=new DesiredCapabilities();
+cap.setBrowserName("chrome");
+cap.setPlatform(Platform.WINDOWS);
+driver=new RemoteWebDriver(new URL(node), cap);	
+}
+else if(brw.equalsIgnoreCase("firefox"))
+{
+System.out.println("Executing on firefox");
+cap.setBrowserName("firefox");	
+cap.setPlatform(Platform.WINDOWS);
+driver=new RemoteWebDriver(new URL(node), cap);
+}
+else if(brw.equalsIgnoreCase("ie"))
+{
+cap.setBrowserName("ie");	
+cap.setPlatform(Platform.WINDOWS);
+driver=new RemoteWebDriver(new URL(node), cap);
+}
+  }
   @Test(dataProvider = "supplyData")
   public void verifylogin(String username,String password) 
   {
@@ -57,12 +85,7 @@ test.log(LogStatus.FAIL, "Login Fail");
    login[3][1]="test3";
    return login;
   }
-  @BeforeTest
-  public void setup() {
-	  report=new ExtentReports("./Reports/Dataprovider.html");
-	System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe") ;
-	driver=new ChromeDriver();
-  }
+  
 
   @AfterTest
   public void afterTest() 
